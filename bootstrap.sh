@@ -31,3 +31,5 @@ pip3 install -e evennia
 #Load DB & Start Server
 #cd mygame
 #evennia migrate
+
+sudo timedatectl set-timezone America/Montreal
