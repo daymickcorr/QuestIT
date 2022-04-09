@@ -5,6 +5,11 @@ help.
 
 """
 from django.conf.urls import url, include
+from django.urls import path
+
+#add web directory to pythonpath to support standard django
+import sys
+sys.path.append('/home/vagrant/mygame/web')
 
 # default evennia patterns
 from evennia.web.urls import urlpatterns
