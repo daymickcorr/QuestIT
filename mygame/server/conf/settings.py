@@ -36,6 +36,11 @@ SERVERNAME = "mygame"
 DEBUG = True
 IN_GAME_ERRORS = True
 
+INSTALLED_APPS += (
+    'web.character',
+    'web.quest',
+)
+
 ######################################################################
 # Settings given in secret_settings.py override those in this file.
 ######################################################################
