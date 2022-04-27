@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Characters</h2>
+
+    {% for character in characters %}
+    <p><a href="{% url 'characterDetailView' character.pk%}">{{character.name}}</a></p>
+    {% endfor %}
+
+
+{% endblock %}

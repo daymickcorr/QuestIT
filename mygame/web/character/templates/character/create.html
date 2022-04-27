@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Game Account Creation</h1>
+
+    <p>
+        Account id: {{ request.user.id }} <br/>
+        Account name: {{ request.user.name }}
+    </p>
+
+    {% if user.is_authenticated %}
+    <form action="?" method="post"> 
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Submit">
+    </form>
+    {% else %}
+    <p>You aren't logged in.</p>
+    {% endif %}
+
+    
+{% endblock %}

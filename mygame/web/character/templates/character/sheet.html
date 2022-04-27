@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+    
     <h1>{{ character.name }}</h1>
 
     <p>{{ character.db.desc }}</p>
@@ -14,6 +14,10 @@
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>Health</td>
+          <td>{{ character.db.health }}</td>
+        </tr>
         <tr>
           <td>Strength</td>
           <td>{{ character.db.str }}</td>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+    #array of quests objects
+    <p>{{ quests }}</p>
+
+    <ul>
+        {% for quest in quests %}
+            <li>{{ quest }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>Id: {{quest.id}}</p>
+    <p>Title: {{quest.title}}</p>
+    <p>Note: {{quest.note}}</p>
+    <p>Difficulty: {{quest.difficulty}}</p>
+    <p>Author: <a href="{% url 'characterDetailView' quest.author.id%}">{{quest.author}}</a></p>
+    <p>Heroes:</p>
+    <ul>
+        {% for hero in quest.hero.all %}
+            <li><a href="{% url 'characterDetailView' hero.id%}">{{ hero }}</a></li>
+        {% empty %}
+            <li>No heroes are assigned to this quest</li>
+        {% endfor %}
+    </ul>
+    
+{% endblock %}
